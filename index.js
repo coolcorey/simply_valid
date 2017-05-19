@@ -567,4 +567,8 @@ function simplyValid(val, options, useCreate) {
 	return getMethods(val, opts);
 }
 
-module.exports = simplyValid;
+if (typeof module !== 'undefined') {
+	module.exports = simplyValid;
+} else {
+	window.simplyValid = simplyValid;
+}
